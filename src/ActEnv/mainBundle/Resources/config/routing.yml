@@ -2,10 +2,6 @@ ActEnvmainBundle_homepage:
     pattern:  /
     defaults: { _controller: ActEnvmainBundle:Default:index }
 
-_default_contact:
-    pattern:  /contact
-    defaults: { _controller: ActEnvmainBundle:Default:contact }
-
 _default_activite:
     pattern:  /activite
     defaults: { _controller: ActEnvmainBundle:Default:activite }
