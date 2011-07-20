@@ -1,3 +1,24 @@
 ActEnvmainBundle_homepage:
-    pattern:  /hello/{name}
+    pattern:  /
     defaults: { _controller: ActEnvmainBundle:Default:index }
+
+_default_contact:
+    pattern:  /contact
+    defaults: { _controller: ActEnvmainBundle:Default:contact }
+
+_default_activite:
+    pattern:  /activite
+    defaults: { _controller: ActEnvmainBundle:Default:activite }
+
+_default_pourqui:
+    pattern:  /pourqui
+    defaults: { _controller: ActEnvmainBundle:Default:pourqui }
+
+_default_valorisation:
+    pattern:  /valorisation
+    defaults: { _controller: ActEnvmainBundle:Default:valorisation }
+
+_default_actualite:
+    pattern:  /actualite
+    defaults: { _controller: ActEnvactualiteBundle:Default:actualite }
+

@@ -1,0 +1,26 @@
+{% extends "ActEnvmainBundle:Default:inside.html.twig" %}
+
+{% block title "A chaque déchet, sa solution" %}
+{% block subtitle "Pour quels clients ?" %}
+
+{% block form %}
+
+<article class="post">
+<div class="imageholder">
+  <img src="{{ asset('bundles/actenvmain/images/depot_interdit.jpg') }}" width="238" height="148"></div>
+<section class="entry">
+<h3>Tout type d'entreprises</h3>
+<p>
+Du plombier à l’industrie aéronautique, et de l’arête de poisson au résidu de grenaillage en passant par les huiles et les plastiques : 
+<ul class="ligreen">
+<li><span class="defaultFontColor">Tout type d’entreprises quelque soit son domaine d’activité et la taille de production de déchets.</span></li>
+<li><span class="defaultFontColor">De la PME au groupe industriel.</span></li>
+<li><span class="defaultFontColor">Les entreprises de traitements de déchets, recherche d’exutoire.</span></li>
+<li><span class="defaultFontColor">Les entreprises consommatrices de matières premières  de substitution.</span></li>
+</ul>
+</p>
+</section>
+<div class="clear"></div>
+</article>
+
+{% endblock %}

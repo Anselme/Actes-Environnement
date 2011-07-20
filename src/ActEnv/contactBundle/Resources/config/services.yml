@@ -1,5 +1,7 @@
 parameters:
 #    act_envcontact.example.class: ActEnv\contactBundle\Example
+    contact_email_to: stephane.girault@gmail.com
+    contact_email_from: stephane.girault@gmail.com
 
 services:
 #    act_envcontact.example:

@@ -1,0 +1,56 @@
+{% extends "ActEnvHelloBundle:Default:inside.html.twig" %}
+
+{% block title "Contacter Actes Environnement" %}
+
+{% block form %}
+<article class="post">
+<div class="imageholder">
+  <img src="{{ asset('bundles/actenvhello/images/depot_interdit.jpg') }}" width="238" height="148"></div>
+<section class="entry">
+
+<h3>Contactez-nous</h3>
+
+{% if app.session.flash('notice') %}
+<div class="flash-message">
+ {{ app.session.flash('notice') }}
+</div>
+{% endif %}
+
+<form action="{{ path('_default_contact') }}" method="POST" id="contact_form">
+        {{ form_errors(form) }}
+<p>
+        {{ form_label(form.email, 'Courriel') }}<br />
+        {{ form_errors(form.email) }}
+        {{ form_widget(form.email) }}
+</p>
+<p>
+        {{ form_label(form.lastname, 'Nom') }}<br />
+        {{ form_errors(form.lastname) }}
+        {{ form_widget(form.lastname) }}
+</p>
+<p>
+        {{ form_label(form.firstname, 'Prénom') }}<br />
+        {{ form_errors(form.firstname) }}
+        {{ form_widget(form.firstname) }}
+</p>
+<p>
+        {{ form_label(form.phone, 'Téléphone') }}<br />
+        {{ form_errors(form.phone) }}
+        {{ form_widget(form.phone) }}
+</p>
+<p>
+        {{ form_label(form.message, 'Message') }}<br />
+        {{ form_errors(form.message) }}
+        {{ form_widget(form.message) }}
+</p>
+
+        {{ form_rest(form) }}
+<p class="no-border">
+        <input class="button" type="submit" value="Contacter Actes Environnement" class="" />
+</p>
+    </form>
+</section>
+<div class="clear"></div>
+</article>
+
+{% endblock %}

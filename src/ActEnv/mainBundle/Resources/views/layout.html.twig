@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" href="{{ asset('bundles/actenvmain/css/style.css') }}" type="text/css" media="all" />
+        <link rel="stylesheet" href="{{ asset('bundles/actenvmain/css/form.css') }}" type="text/css" media="all" />
+        <title>{% block title %}Actes Environnement{% endblock %}</title>
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+        <script type="text/javascript" src="{{ asset('bundles/actenvmain/js/jquery.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/actenvmain/js/collection.js') }}"></script>
+        <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <!--[if IE 6]>
+        <script src="{{ asset('bundles/actenvmain/js/belatedPNG.js') }}"></script>
+        <script>
+            DD_belatedPNG.fix('*');
+        </script>
+        <![endif]-->
+
+    </head>
+
+    <body>
+        <div id="wrap">
+
+            <nav id="mainnav">
+
+            <h1 id="textlogo">
+                Actes<span>Environnement</span>
+            </h1>
+            <ul>
+
+                <li class="{{ app.request.attributes.get('_route')== 'ActEnvmainBundle_homepage' ? 'active' : ''}}" >
+                <a href="{{ path('ActEnvmainBundle_homepage') }}">Accueil</a>
+                </li>
+                <li class="{{ app.request.attributes.get('_route')== '_default_activite' ? 'active' : ''}}" >
+                <a href="{{ path('_default_activite') }}">Activités</a>
+                </li>
+                <li class="{{ app.request.attributes.get('_route')== '_default_pourqui' ? 'active' : ''}}" >
+                <a href="{{ path('_default_pourqui') }}">Pour qui ?</a>
+                </li>
+                <li class="{{ app.request.attributes.get('_route')== '_default_valorisation' ? 'active' : ''}}" >
+                <a href="{{ path('_default_valorisation') }}">Valorisation</a>
+                </li>
+                <li class="{{ app.request.attributes.get('_route')== '_default_contact' ? 'active' : ''}}" >
+                <a href="{{ path('_default_contact') }}">Contact</a>
+                </li>
+                <li class="{{ app.request.attributes.get('_route')== '_default_actualite' ? 'active' : ''}}" >
+                <a href="{{ path('_default_actualite') }}">Actualité</a>
+                </li>
+
+            </ul>
+            </nav>
+
+            {% block content %}
+            {% endblock %}
+            </section>
+        </div>
+
+        <footer>
+
+        <div id="bottom">
+            Actes Environnement | La Fontaine Robert 73210 VANCÉ | Tel : 02 43 35 09 65 | <a href="mailto:actes.environnement@laposte.net">Nous écrire</a>
+            <div class="clear"></div>
+        </div>
+        <div id="credits">
+            Design inspiré par <a href="http://cssheaven.org" title="Download more css templates">CSSHeaven</a> | 2011 | Site Enraciné par <a href="http://letsroot.net" title="Développeur Web Angers">letsroot.net</a></div>
+        </footer>
+
+    </body>
+</html>
