@@ -1,0 +1,7 @@
+parameters:
+#    act_envactualite.example.class: ActEnv\actualiteBundle\Example
+
+services:
+#    act_envactualite.example:
+#        class: %act_envactualite.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

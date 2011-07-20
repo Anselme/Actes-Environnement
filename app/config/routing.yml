@@ -1,3 +1,7 @@
+ActEnvactualiteBundle:
+    resource: "@ActEnvactualiteBundle/Resources/config/routing.yml"
+    prefix:   /
+
 ActEnvcontactBundle:
     resource: "@ActEnvcontactBundle/Resources/config/routing.yml"
     prefix:   /
