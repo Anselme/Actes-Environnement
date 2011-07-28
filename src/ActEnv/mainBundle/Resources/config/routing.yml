@@ -20,4 +20,4 @@ _default_actualite:
 
 _default_contact:
     pattern:  /contact
-    defaults: { _controller: ActEnvacontactBundle:Default:contact }
+    defaults: { _controller: ActEnvacontactBundle:Contact:contact }

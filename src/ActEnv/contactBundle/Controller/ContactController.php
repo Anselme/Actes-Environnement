@@ -12,7 +12,7 @@ use ActEnv\contactBundle\Form\Model\Contact;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
-class DefaultController extends Controller
+class ContactController extends Controller
 {
 
     /**
@@ -22,11 +22,9 @@ class DefaultController extends Controller
     public function contactAction()
     {
         $contact = new Contact();
-        //$contactType = new ContactType();
+        $contactType = new ContactType();
 
-        //$form = $this->get('form.factory')->create($contactType, $contact);
-        //$form = $this->createForm($contactType, $contact);
-        $form = $this->createForm(new ContactType(), $contact);
+        $form = $this->createForm($contactType, $contact);
 
         $request = $this->get('request');
         if ('POST' == $request->getMethod()) {
@@ -36,14 +34,14 @@ class DefaultController extends Controller
                 $lastname = $contact->lastName ;
                 $firstname =  $contact->firstName ;
                 $phone =  $contact->phone ;
-                $courriel =  $contact->courriel ;
+                $courriel =  $contact->email ;
                 $message =  $contact->message ;
 
                 $mail = \Swift_Message::newInstance()
         ->setSubject('Quelqu\'un a rempli le formulaire de contact...')
         ->setFrom($this->container->getParameter('contact_email_from'))
         ->setTo($this->container->getParameter('contact_email_to'))
-        ->setBody($this->renderView('ActEnvcontactBundle:Default:email.txt.twig',
+        ->setBody($this->renderView('ActEnvcontactBundle:Contact:email.txt.twig',
         array('firstname' => $firstname,
               'lastname' => $lastname,
               'courriel' => $courriel,

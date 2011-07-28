@@ -15,4 +15,9 @@ class ContactType extends AbstractType
         $builder->add('phone', 'text');
         $builder->add('message', 'textarea');
     }
+
+    function getName()
+    {
+        return "toto" ;
+    }
 }
