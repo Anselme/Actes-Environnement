@@ -1,22 +1,22 @@
 ActEnvmainBundle_homepage:
     pattern:  /
-    defaults: { _controller: ActEnvmainBundle:Default:index }
+    defaults: { _controller: ActEnvmainBundle:Main:index }
 
 _default_activite:
     pattern:  /activite
-    defaults: { _controller: ActEnvmainBundle:Default:activite }
+    defaults: { _controller: ActEnvmainBundle:Main:activite }
 
 _default_pourqui:
     pattern:  /pourqui
-    defaults: { _controller: ActEnvmainBundle:Default:pourqui }
+    defaults: { _controller: ActEnvmainBundle:Main:pourqui }
 
 _default_valorisation:
     pattern:  /valorisation
-    defaults: { _controller: ActEnvmainBundle:Default:valorisation }
+    defaults: { _controller: ActEnvmainBundle:Main:valorisation }
 
 _default_actualite:
     pattern:  /actualite
-    defaults: { _controller: ActEnvactualiteBundle:Default:actualite }
+    defaults: { _controller: ActEnvactualiteBundle:Actualite:actualite }
 
 _default_contact:
     pattern:  /contact

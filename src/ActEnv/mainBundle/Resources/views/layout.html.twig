@@ -42,10 +42,10 @@
                 <li class="{{ app.request.attributes.get('_route')== '_default_valorisation' ? 'active' : ''}}" >
                 <a href="{{ path('_default_valorisation') }}">Valorisation</a>
                 </li>
-                <li class="{{ app.request.attributes.get('_route')== '_default_contact' ? 'active' : ''}}" >
+                <li class="{{ app.request.attributes.get('_route')== 'ActEnvcontactBundle_form' ? 'active' : ''}}" >
                 <a href="{{ path('_default_contact') }}">Contact</a>
                 </li>
-                <li class="{{ app.request.attributes.get('_route')== '_default_actualite' ? 'active' : ''}}" >
+                <li class="{{ app.request.attributes.get('_route')== 'ActEnvactualiteBundle_homepage' ? 'active' : ''}}" >
                 <a href="{{ path('_default_actualite') }}">Actualité</a>
                 </li>
 

@@ -10,27 +10,27 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
 
-class DefaultController extends Controller
+class MainController extends Controller
 {
 
     public function indexAction()
     {
-        return $this->render('ActEnvmainBundle:Default:index.html.twig');
+        return $this->render('ActEnvmainBundle:Main:index.html.twig');
     }
 
     public function activiteAction()
     {
-        return $this->render('ActEnvmainBundle:Default:activite.html.twig');
+        return $this->render('ActEnvmainBundle:Main:activite.html.twig');
     }
 
     public function pourquiAction()
     {
-        return $this->render('ActEnvmainBundle:Default:pourqui.html.twig');
+        return $this->render('ActEnvmainBundle:Main:pourqui.html.twig');
     }
 
     public function valorisationAction()
     {
-        return $this->render('ActEnvmainBundle:Default:valorisation.html.twig');
+        return $this->render('ActEnvmainBundle:Main:valorisation.html.twig');
     }
 
 }
