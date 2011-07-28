@@ -18,3 +18,6 @@ _default_actualite:
     pattern:  /actualite
     defaults: { _controller: ActEnvactualiteBundle:Default:actualite }
 
+_default_contact:
+    pattern:  /contact
+    defaults: { _controller: ActEnvacontactBundle:Default:contact }
