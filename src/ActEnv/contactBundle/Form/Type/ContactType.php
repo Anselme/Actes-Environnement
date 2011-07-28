@@ -1,6 +1,6 @@
 <?php
 
-namespace ActEnv\contactBundle\Form;
+namespace ActEnv\contactBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilder;

@@ -5,8 +5,8 @@ namespace ActEnv\contactBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 
-use ActEnv\contactBundle\Form\ContactType;
-use ActEnv\contactBundle\Model\Contact;
+use ActEnv\contactBundle\Form\Type\ContactType;
+use ActEnv\contactBundle\Form\Model\Contact;
 
 // these import the "@Route" and "@Template" annotations
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -22,9 +22,11 @@ class DefaultController extends Controller
     public function contactAction()
     {
         $contact = new Contact();
-        $contactType = new ContactType();
+        //$contactType = new ContactType();
 
-        $form = $this->get('form.factory')->create($contactType, $contact);
+        //$form = $this->get('form.factory')->create($contactType, $contact);
+        //$form = $this->createForm($contactType, $contact);
+        $form = $this->createForm(new ContactType(), $contact);
 
         $request = $this->get('request');
         if ('POST' == $request->getMethod()) {
