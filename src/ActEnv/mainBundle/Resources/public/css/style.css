@@ -48,15 +48,15 @@ a:hover, #content a:hover {color:#88BF4A; text-decoration:underline!important;}
 footer {background:#504842 url(../images/bottombg.jpg) repeat-x; color:#666;bottom: 0px; position: relative; width: 100%}
 #mainnav h1 {float:left; padding:20px 0 0 25px; font: bold 3.2em 'TeXGyreAdventor', Arial, sans-serif; color:#88BF4A; text-shadow:#fff 1px 1px 1px; text-transform:uppercase;}
 #mainnav h1 span {font-weight:normal!important; color:#191512!important;}
-#mainnav ul {float:right; width:550px; font:bold 1.6em 'TeXGyreAdventor', Arial, sans-serif; padding-top:25px;}
+#mainnav ul {float:right; width:570px; font:bold 1.6em 'TeXGyreAdventor', Arial, sans-serif; padding-top:25px;}
 #mainnav ul li {display:inline; text-shadow:#fff 1px 1px 1px;}
 #mainnav ul li a {text-decoration:none; display:block; float:left; margin:0 10px; padding-bottom:5px;}
 #mainnav ul li a:hover {color:#88BF4A; text-decoration:none!important;}
 #mainnav ul li.active a {color:#88BF4A; border-bottom:solid 3px #191512; text-decoration:none;}
-#homeheader h2 {display:block; width:450px; float:left; padding:85px 0 0 40px; color:#fff; font:normal 1.4em 'DroidSansRegular', Verdana, Geneva, sans-serif; line-height:1.8em;}
-#homeheader h2 span {display:block; font:bold 1.6em 'TeXGyreAdventor', Arial, sans-serif!important; color:#56782E; text-shadow:#C8EF9C 1px 1px 1px; line-height:1em!important; margin-bottom:20px;}
+#homeheader h2 {display:block; width:550px; float:left; padding:45px 0 0 40px; color:#000; font:normal 1.4em 'DroidSansRegular', Verdana, Geneva, sans-serif; line-height:1.8em;}
+#homeheader h2 span {display:block; font:bold 2.3em 'TeXGyreAdventor', Arial, sans-serif!important; color:#FFF; text-shadow:#C8EF9C 1px 1px 1px; line-height:1em!important; margin-bottom:20px;}
 #homeheader .headerimg {float:right; padding:55px 80px 0 0;}
-#bottom {width:960px; margin:auto; padding:15px 0; text-align:center;color:#CCC}
+#bottom {width:960px; margin:auto; padding:15px 0; text-align:center;color:#CCC;font-size:1.5em;}
 #credits {background:#2d2724; padding:5px; text-align:center; color:#ccc;}
 footer a, #bottom a, #credits a {color:#fff; text-decoration:none!important;}
 .normalpage {background:url(../images/normalpagebg.png) center top no-repeat; padding-top:13px;}
