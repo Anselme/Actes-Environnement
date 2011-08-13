@@ -13,7 +13,11 @@ class ActualiteController extends Controller
     {
         $actualites = $this->getDoctrine()
             ->getrepository('ActEnvactualiteBundle:Actualite')
-            ->findAll();
+            ->findByIsOnLine(true);
+
+        if (!$actualites) {
+            throw $this->createNotFoundException('Rien de neuf pour le moment !');
+        }
 
         return $this->render('ActEnvactualiteBundle:Actualite:actualite.html.twig', array('actualites' => $actualites));
     }

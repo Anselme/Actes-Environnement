@@ -35,11 +35,24 @@ class Actualite
      */
     private $text;
 
+    /**
+     * var boolean $isOnLine
+     *
+     * @ORM\Column(name="isOnLine", type="boolean")
+     */
+    private $isOnLine;
+
+    /**
+     * var datetime $publicationDate
+     *
+     * @ORM\Column(name="publicationDate", type="datetime")
+     */
+    private $publicationDate;
 
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -59,7 +72,7 @@ class Actualite
     /**
      * Get title
      *
-     * @return string 
+     * @return string
      */
     public function getTitle()
     {
@@ -79,10 +92,50 @@ class Actualite
     /**
      * Get text
      *
-     * @return text 
+     * @return text
      */
     public function getText()
     {
         return $this->text;
+    }
+
+    /**
+     * Set isOnLine
+     *
+     * @param bool $isOnLine
+     */
+    public function setIsOnLine(\bool $isOnLine)
+    {
+        $this->isOnLine = $isOnLine;
+    }
+
+    /**
+     * Get isOnLine
+     *
+     * @return bool
+     */
+    public function getIsOnLine()
+    {
+        return $this->isOnLine;
+    }
+
+    /**
+     * Set publicationDate
+     *
+     * @param datetime $publicationDate
+     */
+    public function setPublicationDate($publicationDate)
+    {
+        $this->publicationDate = $publicationDate;
+    }
+
+    /**
+     * Get publicationDate
+     *
+     * @return datetime
+     */
+    public function getPublicationDate()
+    {
+        return $this->publicationDate;
     }
 }
