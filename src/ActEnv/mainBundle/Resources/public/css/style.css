@@ -24,7 +24,7 @@
 
 html {background: #f0f0f0 url(../images/htmlbg.jpg) repeat; width:100%; height:100%;}
 body {background:url(../images/topbg.jpg) repeat-x;  font-family :'DroidSansRegular', Verdana, Geneva, sans-serif; font-size:62.5%; color:#5a5143;}
-a, a:link, a:visited, a:active {color:#6D4A37;}
+a, a:link, a:visited, a:active {color:#FF8C00;}
 .defaultFontColor {color:#5A5143}
 #wrap {width:1001px; margin:0 auto; padding-top:20px;}
 h1, h2, h3 {font-family: 'TeXGyreAdventor', Arial, sans-serif;}
@@ -49,7 +49,7 @@ footer {background:#504842 url(../images/bottombg.jpg) repeat-x; color:#666;bott
 #mainnav h1 {float:left; padding:20px 0 0 25px; font: bold 3.2em 'TeXGyreAdventor', Arial, sans-serif; color:#88BF4A; text-shadow:#000 1px 1px 1px; text-transform:uppercase;}
 #mainnav h1 span {font-weight:normal!important; color:#191512!important;}
 #mainnav ul {float:right; width:570px; font:bold 1.6em 'TeXGyreAdventor', Arial, sans-serif; padding-top:25px;}
-#mainnav ul li {display:inline; text-shadow:#fff 1px 1px 1px;}
+#mainnav ul li {display:inline; text-shadow:#000 1px 1px 1px;}
 #mainnav ul li a {text-decoration:none; display:block; float:left; margin:0 10px; padding-bottom:5px;}
 #mainnav ul li a:hover {color:#88BF4A; text-decoration:none!important;}
 #mainnav ul li.active a {color:#88BF4A; border-bottom:solid 3px #191512; text-decoration:none;}

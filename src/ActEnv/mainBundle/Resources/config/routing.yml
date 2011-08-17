@@ -3,7 +3,7 @@ ActEnvmainBundle_homepage:
     defaults: { _controller: ActEnvmainBundle:Main:index }
 
 _default_activite:
-    pattern:  /activite
+    pattern:  /prestations
     defaults: { _controller: ActEnvmainBundle:Main:activite }
 
 _default_pourqui:
