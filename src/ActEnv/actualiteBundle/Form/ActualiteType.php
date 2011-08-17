@@ -13,7 +13,7 @@ class ActualiteType extends AbstractType
             ->add('title','text', array('label'=>'Titre'))
             ->add('text','textarea', array('label'=>'Contenu'))
             ->add('isOnLine','checkbox', array('required'=>false,'label' => 'Publié'))
-            ->add('publicationDate')
+            ->add('publicationDate','date', array('label' => 'Date de publication'))
         ;
     }
 

@@ -11,8 +11,8 @@ class ContactType extends AbstractType
     {
         $builder->add('email', 'email');
         $builder->add('lastname', 'text');
-        $builder->add('firstname', 'text');
-        $builder->add('phone', 'text');
+        $builder->add('firstname', 'text', array('required'=>false));
+        $builder->add('phone', 'text', array('required'=>false));
         $builder->add('message', 'textarea');
     }
 
@@ -20,4 +20,5 @@ class ContactType extends AbstractType
     {
         return "actenv_contact" ;
     }
+
 }
