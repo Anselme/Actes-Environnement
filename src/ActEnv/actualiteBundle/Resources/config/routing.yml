@@ -1,3 +1,28 @@
-ActEnvactualiteBundle_homepage:
+actualite:
     pattern:  /actualite
     defaults: { _controller: ActEnvactualiteBundle:Actualite:index }
+
+actualite_show:
+    pattern:  /actualite/{id}/show
+    defaults: { _controller: ActEnvactualiteBundle:Actualite:show }
+
+actualite_edit:
+    pattern:  /actualite/{id}/edit
+    defaults: { _controller: ActEnvactualiteBundle:Actualite:edit }
+
+actualite_new:
+    pattern:  /actualite/new
+    defaults: { _controller: ActEnvactualiteBundle:Actualite:new }
+
+actualite_create:
+    pattern:  /actualite/create
+    defaults: { _controller: ActEnvactualiteBundle:Actualite:create }
+
+actualite_delete:
+    pattern:  /actualite/{id}/delete
+    defaults: { _controller: ActEnvactualiteBundle:Actualite:delete }
+
+actualite_update:
+    pattern:  /actualite/{id}/update
+    defaults: { _controller: ActEnvactualiteBundle:Actualite:update }
+
