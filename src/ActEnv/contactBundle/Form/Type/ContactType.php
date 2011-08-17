@@ -18,6 +18,6 @@ class ContactType extends AbstractType
 
     function getName()
     {
-        return "toto" ;
+        return "actenv_contact" ;
     }
 }
