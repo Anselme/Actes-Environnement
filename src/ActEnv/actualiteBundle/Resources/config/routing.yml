@@ -2,27 +2,31 @@ actualite:
     pattern:  /actualite
     defaults: { _controller: ActEnvactualiteBundle:Actualite:index }
 
+actualite_list:
+    pattern:  /admin/actualite
+    defaults: { _controller: ActEnvactualiteBundle:ActualiteAdmin:index }
+
 actualite_show:
-    pattern:  /actualite/{id}/show
-    defaults: { _controller: ActEnvactualiteBundle:Actualite:show }
+    pattern:  /admin/actualite/{id}/show
+    defaults: { _controller: ActEnvactualiteBundle:ActualiteAdmin:show }
 
 actualite_edit:
-    pattern:  /actualite/{id}/edit
-    defaults: { _controller: ActEnvactualiteBundle:Actualite:edit }
+    pattern:  /admin/actualite/{id}/edit
+    defaults: { _controller: ActEnvactualiteBundle:ActualiteAdmin:edit }
 
 actualite_new:
-    pattern:  /actualite/new
-    defaults: { _controller: ActEnvactualiteBundle:Actualite:new }
+    pattern:  /admin/actualite/new
+    defaults: { _controller: ActEnvactualiteBundle:ActualiteAdmin:new }
 
 actualite_create:
-    pattern:  /actualite/create
-    defaults: { _controller: ActEnvactualiteBundle:Actualite:create }
+    pattern:  /admin/actualite/create
+    defaults: { _controller: ActEnvactualiteBundle:ActualiteAdmin:create }
 
 actualite_delete:
-    pattern:  /actualite/{id}/delete
-    defaults: { _controller: ActEnvactualiteBundle:Actualite:delete }
+    pattern:  /admin/actualite/{id}/delete
+    defaults: { _controller: ActEnvactualiteBundle:ActualiteAdmin:delete }
 
 actualite_update:
-    pattern:  /actualite/{id}/update
-    defaults: { _controller: ActEnvactualiteBundle:Actualite:update }
+    pattern:  /admin/actualite/{id}/update
+    defaults: { _controller: ActEnvactualiteBundle:ActualiteAdmin:update }
 

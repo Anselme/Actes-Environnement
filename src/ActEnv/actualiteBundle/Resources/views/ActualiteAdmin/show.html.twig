@@ -16,11 +16,7 @@
 </table>
 
 <ul class="record_actions">
-    <li>
-        <a href="{{ path('actualite') }}">
-        Retour à la liste des Actualités
-        </a>
-    </li>
+    {% include 'ActEnvactualiteBundle:ActualiteAdmin:retour_list.html.twig' %}
     <li>
         <a href="{{ path('actualite_edit', { 'id': entity.id }) }}">
             Modifier cette actualité

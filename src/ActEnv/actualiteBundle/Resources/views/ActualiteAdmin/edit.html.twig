@@ -8,11 +8,7 @@
 </form>
 
 <ul class="record_actions">
-    <li>
-        <a href="{{ path('actualite') }}">
-        Retour à la liste des Actualités
-        </a>
-    </li>
+    {% include 'ActEnvactualiteBundle:ActualiteAdmin:retour_list.html.twig' %}
     <li>
         <form action="{{ path('actualite_delete', { 'id': entity.id }) }}" method="post">
             {{ form_widget(delete_form) }}
