@@ -52,6 +52,8 @@ class Actualite
      */
     private $publicationDate;
 
+
+
     /**
      * Get id
      *
