@@ -1,4 +1,8 @@
-<h1>Saisir et publier une nouvelle Actualité</h1>
+{% extends "ActEnvactualiteBundle:ActualiteAdmin:layout_admin.html.twig" %}
+
+            {% block content %}
+
+<h2>Saisir et publier une nouvelle Actualité</h2>
 
 <form action="{{ path('actualite_create') }}" method="post" {{ form_enctype(form) }}>
     {{ form_widget(form) }}
@@ -7,6 +11,6 @@
     </p>
 </form>
 
-<ul class="record_actions">
     {% include 'ActEnvactualiteBundle:ActualiteAdmin:retour_list.html.twig' %}
-</ul>
+
+            {% endblock %}

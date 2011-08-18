@@ -77,7 +77,7 @@ class ActualiteAdminController extends Controller
      *
      * @Route("/create", name="actualite_create")
      * @Method("post")
-     * @Template("ActEnvactualiteBundle:Actualite:new.html.twig")
+     * @Template("ActEnvactualiteBundle:ActualiteAdmin:new.html.twig")
      */
     public function createAction()
     {
@@ -135,7 +135,7 @@ class ActualiteAdminController extends Controller
      *
      * @Route("/{id}/update", name="actualite_update")
      * @Method("post")
-     * @Template("ActEnvactualiteBundle:Actualite:edit.html.twig")
+     * @Template("ActEnvactualiteBundle:ActualiteAdmin:edit.html.twig")
      */
     public function updateAction($id)
     {
@@ -198,7 +198,7 @@ class ActualiteAdminController extends Controller
             }
         }
 
-        return $this->redirect($this->generateUrl('actualite'));
+        return $this->redirect($this->generateUrl('actualite_list'));
     }
 
     private function createDeleteForm($id)

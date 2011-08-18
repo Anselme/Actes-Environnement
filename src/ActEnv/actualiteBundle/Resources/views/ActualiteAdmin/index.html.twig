@@ -1,4 +1,8 @@
-<h1>Liste des Actualite</h1>
+{% extends "ActEnvactualiteBundle:ActualiteAdmin:layout_admin.html.twig" %}
+
+            {% block content %}
+
+<h2>Liste des Actualite</h2>
 
 <table class="records_list">
     <thead>
@@ -7,32 +11,28 @@
             <th>Contenu</th>
             <th>En ligne</th>
             <th>Date de Publication</th>
-            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
     {% for entity in entities %}
         <tr>
-            <td>{{ entity.title }}</td>
+            <td><a href="{{ path('actualite_edit', { 'id': entity.id }) }}">{{ entity.title }}</a></td>
             <td>{{ entity.text }}</td>
-            <td>{{ entity.isOnLine }}</td>
-            <td>{{ entity.publicationDate|date('Y-m-d') }}</td>
             <td>
-                <ul>
-                    <li>
-                        <a href="{{ path('actualite_edit', { 'id': entity.id }) }}">Éditer</a>
-                    </li>
-                </ul>
+            {% if entity.isOnLine %}
+            <img width="16" height="16" src="{{ asset('bundles/actenvmain/images/icons/tick.png') }}" />
+            {% else %}
+            <img width="16" height="16" src="{{ asset('bundles/actenvmain/images/icons/cancel.png') }}" />
+
+            {% endif %}
             </td>
+            <td>{{ entity.publicationDate|date('Y-m-d') }}</td>
         </tr>
     {% endfor %}
     </tbody>
 </table>
 
-<ul>
-    <li>
         <a href="{{ path('actualite_new') }}">
         Créer une nouvelle Actualité
         </a>
-    </li>
-</ul>
+            {% endblock %}
