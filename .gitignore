@@ -4,3 +4,6 @@ app/cache/*
 app/logs/*
 build/
 vendor/
+
+# don't share local configuration
+app/config/config*_local.yml
