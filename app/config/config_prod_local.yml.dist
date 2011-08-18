@@ -1,0 +1,11 @@
+# Copy me to config_prod_local.yml
+imports:
+    - { resource: config_prod.yml }
+
+security:
+
+    providers:
+        in_memory:
+            users:
+                user:  { password: userpass, roles: [ 'ROLE_USER' ] }
+                admin: { password: adminpass, roles: [ 'ROLE_ADMIN' ] }
