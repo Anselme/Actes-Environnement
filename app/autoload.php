@@ -15,6 +15,8 @@ $loader->registerNamespaces(array(
     'Monolog'          => __DIR__.'/../vendor/monolog/src',
     'Assetic'          => __DIR__.'/../vendor/assetic/src',
     'Metadata'         => __DIR__.'/../vendor/metadata/src',
+    'Imagine'          => __DIR__.'/../vendor/imagine/lib',
+    'Avalanche'        => __DIR__.'/../vendor/bundles',
 //    'Gedmo'            => __DIR__.'/../vendor/doctrine-extensions/lib',
 //    'Stof'             => __DIR__.'/../vendor/bundles',
 

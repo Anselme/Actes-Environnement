@@ -8,6 +8,7 @@
     <thead>
         <tr>
             <th>Titre</th>
+            <th>Image</th>
             <th>Contenu</th>
             <th>En ligne</th>
             <th>Date de Publication</th>
@@ -17,6 +18,13 @@
     {% for entity in entities %}
         <tr>
             <td><a href="{{ path('actualite_edit', { 'id': entity.id }) }}">{{ entity.title }}</a></td>
+            <td>
+            {% if entity.getWebPath %}
+              <img src="{{ entity.getWebPath | apply_filter('admin_list') }}" width="119" height="74"/>
+            {% else %}
+              <img src="{{ asset('bundles/actenvmain/images/depot_interdit.jpg') | apply_filter('admin_list') }}" width="119" height="74"></div>
+           {% endif %}
+            </td>
             <td>{{ entity.text }}</td>
             <td>
             {% if entity.isOnLine %}

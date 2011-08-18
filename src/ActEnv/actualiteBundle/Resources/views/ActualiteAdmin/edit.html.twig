@@ -32,7 +32,9 @@
         {{ form_widget(edit_form.publicationDate) }}
 </p>
 <p>
-<img src="/{{ entity.getWebPath }}" width="238" height="148"/>
+{% if entity.getWebpath %}
+<img src="{{ entity.getWebPath | apply_filter('actualite') }}" width="238" height="148"/>
+{% endif %}
 </p>
 
 

@@ -59,7 +59,11 @@ class Actualite
     public $path;
 
     /**
-     * @Assert\File()
+     * @Assert\File(maxSize = "1024k", mimeTypes = {
+     * "image/gif",
+     * "image/jpeg",
+     * "image/png"
+     * })
      */
     public $image;
 
@@ -70,14 +74,19 @@ class Actualite
             return;
         }
 
-        // we use the original file name here but you should
-        // sanitize it at least to avoid any security issues
+        $extension = $this->image->guessExtension();
+        if(!$extension)
+        {
+            $extension = 'bin' ;
+        }
+
+        $brand_new_name = uniqid().'.'.$extension ;
 
         // move takes the target directory and then the target filename to move to
-        $this->image->move($this->getUploadRootDir(), $this->image->getClientOriginalName());
+        $this->image->move($this->getUploadRootDir(), $brand_new_name);
 
         // set the path property to the filename where you'ved saved the file
-        $this->setPath($this->image->getClientOriginalName());
+        $this->setPath($brand_new_name);
 
         // clean up the file property as you won't need it anymore
         unset($this->image);
@@ -101,7 +110,7 @@ class Actualite
 
     protected function getUploadDir()
     {
-        // TODO ne pas mettre bundle/actenvactualite end ur ...
+        // TODO ne pas mettre bundle/actenvactualite en dur ...
         // get rid of the __DIR__ so it doesn't screw when displaying uploaded doc/image in the view.
         return 'bundles/actenvactualite/upload/images';
     }

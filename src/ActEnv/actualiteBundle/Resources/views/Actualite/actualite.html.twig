@@ -10,9 +10,9 @@
 <div class="imageholder">
 
 {% if actualite.getWebPath%}
-<img src="/{{ actualite.getWebPath }}" width="238" height="148"></div>
+<img src="{{ actualite.getWebPath | apply_filter('actualite') }}" width="238" height="148"></div>
 {% else %}
-<img src="{{ asset('bundles/actenvmain/images/depot_interdit.jpg') }}" width="238" height="148"></div>
+<img src="{{ asset('bundles/actenvmain/images/depot_interdit.jpg') | apply_filter('actualite') }}" width="238" height="148"></div>
 {% endif %}
 
 <section class="entry">
