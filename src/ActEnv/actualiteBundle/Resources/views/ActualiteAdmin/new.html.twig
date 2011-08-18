@@ -30,6 +30,11 @@
         {{ form_widget(form.publicationDate) }}
 </p>
 
+<p>
+        {{ form_label(form.image) }}<br />
+        {{ form_errors(form.image) }}
+        {{ form_widget(form.image) }}
+</p>
 
         {{ form_rest(form) }}
     <p>

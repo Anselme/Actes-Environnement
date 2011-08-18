@@ -91,6 +91,10 @@ class ActualiteAdminController extends Controller
 
             if ($form->isValid()) {
                 $em = $this->getDoctrine()->getEntityManager();
+
+                //gestion de l'image
+                $entity->upload();
+
                 $em->persist($entity);
                 $em->flush();
 
@@ -158,6 +162,10 @@ class ActualiteAdminController extends Controller
 
             if ($editForm->isValid()) {
                 $em = $this->getDoctrine()->getEntityManager();
+
+                //gestion de l'image
+                $entity->upload();
+
                 $em->persist($entity);
                 $em->flush();
 

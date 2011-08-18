@@ -8,7 +8,13 @@
 {% for actualite in actualites %}
 <article class="post">
 <div class="imageholder">
-  <img src="{{ asset('bundles/actenvmain/images/depot_interdit.jpg') }}" width="238" height="148"></div>
+
+{% if actualite.getWebPath%}
+<img src="/{{ actualite.getWebPath }}" width="238" height="148"></div>
+{% else %}
+<img src="{{ asset('bundles/actenvmain/images/depot_interdit.jpg') }}" width="238" height="148"></div>
+{% endif %}
+
 <section class="entry">
 <h3>{{ actualite.title }}</h3>
 {{ actualite.text }}

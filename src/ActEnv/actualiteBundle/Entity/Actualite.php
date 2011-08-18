@@ -52,7 +52,59 @@ class Actualite
      */
     private $publicationDate;
 
+    /**
+     *
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    public $path;
 
+    /**
+     * @Assert\File()
+     */
+    public $image;
+
+    public function upload()
+    {
+        // the file property can be empty if the field is not required
+        if (null === $this->image) {
+            return;
+        }
+
+        // we use the original file name here but you should
+        // sanitize it at least to avoid any security issues
+
+        // move takes the target directory and then the target filename to move to
+        $this->image->move($this->getUploadRootDir(), $this->image->getClientOriginalName());
+
+        // set the path property to the filename where you'ved saved the file
+        $this->setPath($this->image->getClientOriginalName());
+
+        // clean up the file property as you won't need it anymore
+        unset($this->image);
+}
+
+    public function getAbsolutePath()
+    {
+        return null === $this->path ? null : $this->getUploadRootDir().'/'.$this->path;
+    }
+
+    public function getWebPath()
+    {
+        return null === $this->path ? null : $this->getUploadDir().'/'.$this->path;
+    }
+
+    protected function getUploadRootDir()
+    {
+        // the absolute directory path where uploaded documents should be saved
+        return __DIR__.'/../../../../web/'.$this->getUploadDir();
+    }
+
+    protected function getUploadDir()
+    {
+        // TODO ne pas mettre bundle/actenvactualite end ur ...
+        // get rid of the __DIR__ so it doesn't screw when displaying uploaded doc/image in the view.
+        return 'bundles/actenvactualite/upload/images';
+    }
 
     /**
      * Get id
@@ -142,5 +194,25 @@ class Actualite
     public function getPublicationDate()
     {
         return $this->publicationDate;
+    }
+
+    /**
+     * Set path
+     *
+     * @param string $path
+     */
+    public function setPath($path)
+    {
+        $this->path = $path;
+    }
+
+    /**
+     * Get path
+     *
+     * @return string
+     */
+    public function getPath()
+    {
+        return $this->path;
     }
 }
