@@ -31,7 +31,7 @@ class Contact
 
     /**
      * @var string
-     * @Assert\NotBlank(message="merci de saisir une adresse courriel.")
+     * @Assert\NotBlank(message="Merci de saisir une adresse courriel.")
      * @Assert\Email(message="Email non valide.")
      */
     public $email;

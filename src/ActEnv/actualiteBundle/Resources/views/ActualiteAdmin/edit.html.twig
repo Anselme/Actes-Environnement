@@ -5,18 +5,36 @@
 <h2>Modifier une Actualite</h2>
 
 <form action="{{ path('actualite_update', { 'id': entity.id }) }}" method="post" {{ form_enctype(edit_form) }}>
-    {{ form_widget(edit_form) }}
 
 
 
 <p>
-        {{ form_label(edit_form.title, 'Titre') }}<br />
+        {{ form_label(edit_form.title) }}<br />
         {{ form_errors(edit_form.title) }}
-        {{ form_widget(edit_form.title) }}
+        {{ form_widget(edit_form.title, {'attr':{'size' : '50'}}) }}
+</p>
+
+<p>
+        {{ form_label(edit_form.text) }}<br />
+        {{ form_errors(edit_form.text) }}
+        {{ form_widget(edit_form.text, {'attr':{'cols' : '90', 'rows' : '10'}}) }}
+</p>
+
+<p>
+        {{ form_label(edit_form.isOnLine) }}<br />
+        {{ form_errors(edit_form.isOnLine) }}
+        {{ form_widget(edit_form.isOnLine) }}
+</p>
+
+<p>
+        {{ form_label(edit_form.publicationDate) }}<br />
+        {{ form_errors(edit_form.publicationDate) }}
+        {{ form_widget(edit_form.publicationDate) }}
 </p>
 
 
-    <p class="no-border">
+        {{ form_rest(edit_form) }}
+    <p>
         <button class="button" type="submit">Enregistrer les modifications</button>
     </p>
 </form>

@@ -64,6 +64,7 @@ class ActualiteAdminController extends Controller
     public function newAction()
     {
         $entity = new Actualite();
+        $entity->setPublicationDate(new \DateTime());
         $form   = $this->createForm(new ActualiteType(), $entity);
 
         return array(
@@ -93,7 +94,7 @@ class ActualiteAdminController extends Controller
                 $em->persist($entity);
                 $em->flush();
 
-                return $this->redirect($this->generateUrl('actualite_show', array('id' => $entity->getId())));
+                return $this->redirect($this->generateUrl('actualite_list'));
 
             }
         }

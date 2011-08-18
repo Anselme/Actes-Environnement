@@ -5,9 +5,35 @@
 <h2>Saisir et publier une nouvelle Actualité</h2>
 
 <form action="{{ path('actualite_create') }}" method="post" {{ form_enctype(form) }}>
-    {{ form_widget(form) }}
+
+<p>
+        {{ form_label(form.title) }}<br />
+        {{ form_errors(form.title) }}
+        {{ form_widget(form.title, {'attr':{'size' : '50'}}) }}
+</p>
+
+<p>
+        {{ form_label(form.text) }}<br />
+        {{ form_errors(form.text) }}
+        {{ form_widget(form.text, {'attr':{'cols' : '90', 'rows' : '10', 'placeholder' : 'Vas-y mon grand, fonce ...'}}) }}
+</p>
+
+<p>
+        {{ form_label(form.isOnLine) }}<br />
+        {{ form_errors(form.isOnLine) }}
+        {{ form_widget(form.isOnLine) }}
+</p>
+
+<p>
+        {{ form_label(form.publicationDate) }}<br />
+        {{ form_errors(form.publicationDate) }}
+        {{ form_widget(form.publicationDate) }}
+</p>
+
+
+        {{ form_rest(form) }}
     <p>
-        <button type="submit">Créer</button>
+        <button class="button" type="submit">Créer</button>
     </p>
 </form>
 

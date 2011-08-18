@@ -41,7 +41,7 @@
 <p>
         {{ form_label(form.message, 'Message') }}<br />
         {{ form_errors(form.message) }}
-        {{ form_widget(form.message) }}
+        {{ form_widget(form.message, {'attr':{'cols' : '60', 'rows' : '7', 'placeholder' : 'Merci de saisir un message, nous vous répondrons dans les plus bref délais...'}}) }}
 </p>
 
         {{ form_rest(form) }}
