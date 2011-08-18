@@ -16,7 +16,7 @@
 </div>
 {% endif %}
 
-<form action="{{ path('_default_contact') }}" method="POST" id="contact_form">
+<form action="{{ path('_default_contact') }}" method="POST" id="contact_form" >
         {{ form_errors(form) }}
 <p>
         {{ form_label(form.email, 'Courriel') }}<br />

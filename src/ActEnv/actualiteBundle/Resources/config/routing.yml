@@ -1,32 +1,8 @@
-actualite:
-    pattern:  /actualite
-    defaults: { _controller: ActEnvactualiteBundle:Actualite:index }
+ActEnvactualiteBundle_front:
+    resource: "@ActEnvactualiteBundle/Resources/config/routing_front.yml"
+    prefix:   /
 
-actualite_list:
-    pattern:  /admin/actualite
-    defaults: { _controller: ActEnvactualiteBundle:ActualiteAdmin:index }
-
-actualite_show:
-    pattern:  /admin/actualite/{id}/show
-    defaults: { _controller: ActEnvactualiteBundle:ActualiteAdmin:show }
-
-actualite_edit:
-    pattern:  /admin/actualite/{id}/edit
-    defaults: { _controller: ActEnvactualiteBundle:ActualiteAdmin:edit }
-
-actualite_new:
-    pattern:  /admin/actualite/new
-    defaults: { _controller: ActEnvactualiteBundle:ActualiteAdmin:new }
-
-actualite_create:
-    pattern:  /admin/actualite/create
-    defaults: { _controller: ActEnvactualiteBundle:ActualiteAdmin:create }
-
-actualite_delete:
-    pattern:  /admin/actualite/{id}/delete
-    defaults: { _controller: ActEnvactualiteBundle:ActualiteAdmin:delete }
-
-actualite_update:
-    pattern:  /admin/actualite/{id}/update
-    defaults: { _controller: ActEnvactualiteBundle:ActualiteAdmin:update }
+ActEnvactualiteBundle_admin:
+    resource: "@ActEnvactualiteBundle/Resources/config/routing_admin.yml"
+    prefix:   /admin
 

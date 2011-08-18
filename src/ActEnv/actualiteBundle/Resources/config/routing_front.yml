@@ -1,0 +1,4 @@
+actualite:
+    pattern: /actualite 
+    defaults: { _controller: ActEnvactualiteBundle:Actualite:index }
+
