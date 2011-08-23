@@ -31,12 +31,17 @@
         {{ form_errors(edit_form.publicationDate) }}
         {{ form_widget(edit_form.publicationDate) }}
 </p>
-<p>
 {% if entity.getWebpath %}
+<p>
 <img src="{{ entity.getWebPath | apply_filter('actualite') }}" width="238" height="148"/>
-{% endif %}
 </p>
+{% endif %}
 
+<p>
+        {{ form_label(edit_form.image) }}<br />
+        {{ form_errors(edit_form.image) }}
+        {{ form_widget(edit_form.image) }}
+</p>
 
         {{ form_rest(edit_form) }}
     <p>
