@@ -7,3 +7,5 @@ vendor/
 
 # don't share local configuration
 app/config/config*_local.yml
+
+.rsync*
