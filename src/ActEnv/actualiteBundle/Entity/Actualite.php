@@ -90,7 +90,7 @@ class Actualite
 
         // clean up the file property as you won't need it anymore
         unset($this->image);
-}
+    }
 
     public function getAbsolutePath()
     {
